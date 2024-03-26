@@ -1,4 +1,4 @@
-import { CounterHook } from "@/hooks";
+import { CounterHook } from "@/app/hooks";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,6 +8,9 @@ export const metadata: Metadata = {
 
 export default function Counter() {
     return (
-        <CounterHook value={ 10 }/>
+        <div className="flex flex-col items-center justify-center h-full">
+            <span className="text-2xl text-blue-600 font-semibold tracking-widest">Productos en el carrito</span>
+            <CounterHook value={ 10 }/>
+        </div>
     )
 }
