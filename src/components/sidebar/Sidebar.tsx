@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { IoBrowsersOutline, IoCalculator, IoLogoGithub, IoLogoReact } from "react-icons/io5";
+import { IoBrowsersOutline, IoCalculator, IoLogoGithub, IoLogoReact, IoHeartCircleOutline } from 'react-icons/io5';
 import { SidebarMenuItem } from "./SidebarMenuItem";
+
 
 const menuItems = [
     {
@@ -23,12 +24,21 @@ const menuItems = [
         title: 'Pokemons',
         subtitle: 'Listado de Pokemones'
     },
+
+    {
+        path: '/dashboard/favorites',
+        icono: <IoHeartCircleOutline size={ 30 }/>,
+        title: 'Favoritos',
+        subtitle: 'Pokemones favoritos'
+    },
+
+    
 ]
 
 export const Sidebard = () => {
   return (
-        <div className="flex bg-gray-900 w-80">
-            <div className="flex justify-between flex-col m-6 max-w-64">
+        <div className="flex bg-gray-900 min-w-64 overflow-hidden overflow-y-auto">
+            <div className="flex justify-between flex-col m-6">
                 <div className="text-white">
                     <h1 className="text-2xl font-bold flex flex-wrap items-center">
                         <IoLogoReact className="mr-2"/>

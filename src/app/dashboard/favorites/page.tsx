@@ -2,8 +2,8 @@ import { PokemonItems, PokemonsResponse, SimplePokemons } from "@/pokemons";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: 'Pokemons',
-    description: 'Listado de pokemons'
+    title: 'Favoritos',
+    description: 'Listado de pokemons favoritos'
 }
 
 const getPokemons = async (limit = 20, offset = 0) : Promise<SimplePokemons[]> => {
@@ -24,7 +24,7 @@ export default async function Pokemons() {
 
     return (
         <div className="flex flex-col items-center h-screen">
-            <span className="text-5xl my-7 text-center">Listado de Pokemons <small className="text-sky-600 font-semibold">Estatico</small></span>
+            <span className="text-5xl my-7 text-center">Pokemons Favoritos <small className="text-sky-600 font-semibold">Global State</small></span>
             <PokemonItems pokemons={ pokemons } />
         </div>
   );

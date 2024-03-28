@@ -1,12 +1,16 @@
-import Link from "next/link";
+import { WidgetGrid } from "@/components";
+
+export const metadata = {
+ title: 'Main',
+ description: 'Descripcion Main',
+};
 
 export default function Main() {
   return (
-        <main className="h-screen w-full flex flex-col justify-center items-center bg-[#1A2238]">
-          <h1 className="text-9xl font-extrabold text-white tracking-widest">HOLA</h1>
-          <div className="bg-[#FF6A3D] px-2 text-sm rounded rotate-12 absolute">
-            BIENVENIDOS A MI APP WEB
-          </div>
-        </main>
+    <div className="flex flex-col items-center text-black p-2 bg-gray-200 min-h-full">
+      <h1 className="mt-3 text-3xl">Dashboard</h1>
+      <span className="text-xl">Informacion general</span>
+      <WidgetGrid/>
+    </div>
   );
 }
