@@ -4,3 +4,4 @@ export type { Pokemon } from './interfaces/pokemon'
 
 export { PokemonItems } from './components/PokemonItems'
 export { PokemonCard } from './components/PokemonCard'
+export { PokemonFavorites } from './components/PokemonFavorites'
